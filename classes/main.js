@@ -32,3 +32,27 @@ class MyClass {
 // user.sayHi()
 // user.age = 33
 // console.log(user.age)
+
+class Animal {
+  constructor(name) {
+    this.name = name;
+    this.speed = 0
+  }
+  run(speed) {
+    this.speed = speed;
+    console.log(`${this.name} runs with the ${this.speed} speed.`);
+  }
+  stop() {
+    this.speed = 0;
+    console.log(`${this.name} stands still`);
+  }
+}
+let animal = new Animal('Dog')
+
+class Rabbit extends Animal {
+  hide() {
+    alert(`${this.name} hides!`);
+  }
+}
+
+let rabbit = new Rabbit("White Rabbit");
